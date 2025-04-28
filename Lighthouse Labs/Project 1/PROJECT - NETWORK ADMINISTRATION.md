@@ -58,7 +58,7 @@ Running a scan on our network shows us there are 6 hosts up out of a possible 25
 | Network Layer | IP Address \- 192.168.219.1 |
 | Transport Layer | Ports \- 21, 80, 443, 3306, 5000, 7000, 7070 |
 
-![](https://drive.google.com/file/d/1dwNqAdAF_28RrycjKzZFmXBQLgvn0c7H/view?usp=drive_link)
+![Imgur](https://i.imgur.com/2TmpDtk.png)
 ![][image2]  
 The above 2 screenshots show the nmap scan report for IP Address “192.168.219.1” which is the hardware MacBook Pro the VM is running on.
 
