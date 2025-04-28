@@ -55,6 +55,7 @@ Note
 Some information, like the MAC address, you may have to get from your Wireshark capture.
 
 ![Zenmap scan results example][image1]
+![C1_Project_1](https://learningimages.lighthouselabs.ca/Cyber+BC/Cyber+BC+C1/Cyber+BC+C1.5/C1_U5_Project_01.png)
 
 ![Zenmap scan results example][image2]
 
