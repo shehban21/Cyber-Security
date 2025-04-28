@@ -54,12 +54,11 @@ Note
 
 Some information, like the MAC address, you may have to get from your Wireshark capture.
 
-![Zenmap scan results example][image1]
 ![C1_Project_1](https://learningimages.lighthouselabs.ca/Cyber+BC/Cyber+BC+C1/Cyber+BC+C1.5/C1_U5_Project_01.png)
 
-![Zenmap scan results example][image2]
+![C2_Project_1](https://learningimages.lighthouselabs.ca/Cyber+BC/Cyber+BC+C1/Cyber+BC+C1.5/C1_U5_Project_02.png)
 
-![Zenmap scan results example][image3]
+![C3_Project_1](https://learningimages.lighthouselabs.ca/Cyber+BC/Cyber+BC+C1/Cyber+BC+C1.5/C1_U5_Project_03.png)
 
 #### Part 1C Verifying Collected Information
 
