@@ -66,7 +66,7 @@ Overall, the cost and work effort required to enhance the security of Cat’s Co
 
 We have run a vulnerability assessment scan on the company network, with the targets being all the hardware devices on the network. The scan has provided us with a few vulnerabilities. This section divides these vulnerabilities by device and severity.
 
-![][image1]  
+![Imgur](https://imgur.com/a1FuCCn.png)
 Chart showing devices and the severity of vulnerabilities found on them by the assessment.
 
 As we can see, the scan was executed on a total of 5 devices, all of which exist on the company network. 
@@ -96,10 +96,10 @@ The first tool we used was nmap, which we use to find all the available devices 
 There are two steps to this.
 
 1. First we run an IP address scan on the terminal of the Kali Linux Device to get the network address. This also provides us with the subnet mask, which is used to create sub networks under the main network. This can tell us how many devices can be on the network in total.\[4\]  
-   ![][image2]  
+   ![Imgur](https://imgur.com/bCzW6kS.png)
    IP address scan that provides us with the network address and the subnet mask.  
 2. Using the network address we have obtained from this, we can use nmap, a tool that can map networks to find all the active devices on our network.\[5\]  
-   ![][image3]  
+   ![Imgur](https://imgur.com/IqZAVol.png)
    nmap scan provides us with active devices on the network  
    
 
@@ -145,7 +145,7 @@ All the systems were successfully scanned by the OpenVAS/GVM. Of the five device
 
 This report identifies the highest priority vulnerabilities that need to be addressed on the company network. The severity level is determined by the Common Vulnerability Scoring System(CVSS) Score that has been assigned to a vulnerability by the National Vulnerability Database(NVD). All the tables containing vulnerabilities are sorted from highest to lowest severity. The number of vulnerabilities are divided in to these classes by severity:
 
-![][image4]  
+![Imgur](https://imgur.com/z4rQM3A.png)
 There are 5 low severity vulnerabilities and 14 medium severity vulnerabilities found in total on the whole network. Let’s separate them by the 5 devices as found by nmap and get more details on them:
 
 1. ### VMWare Host {#vmware-host}
