@@ -59,7 +59,7 @@ Running a scan on our network shows us there are 6 hosts up out of a possible 25
 | Transport Layer | Ports \- 21, 80, 443, 3306, 5000, 7000, 7070 |
 
 ![Imgur](https://i.imgur.com/2TmpDtk.png)
-![][image2]  
+![Imgur](https://i.imgur.com/C5YgFZO.png)
 The above 2 screenshots show the nmap scan report for IP Address “192.168.219.1” which is the hardware MacBook Pro the VM is running on.
 
 2. The next 3 devices are the Virtual Machines we’re checking for. The second device is as follows:  
@@ -79,7 +79,7 @@ The above 2 screenshots show the nmap scan report for IP Address “192.168.219.
 | Network Layer | IP Address \- 192.168.219.128 |
 | Transport Layer | 80 |
 
-![][image3]\[1\]  
+![Imgur](https://i.imgur.com/l5INh4B.png)
 This screenshot shows the nmap scan report for the IP address “192.168.219.128” which is our Ubuntu Linux VM.
 
 3. The third device is as follows:  
@@ -99,7 +99,8 @@ This screenshot shows the nmap scan report for the IP address “192.168.219.128
 | Network Layer | IP Address \- 192.168.219.132 |
 | Transport Layer | 80 |
 
-![][image4]![][image5]  
+![Imgur](https://i.imgur.com/HWIZQEu.png)
+![Imgur](https://i.imgur.com/Ro4MCMT.png)
 The above two screenshots show the nmap scan report for the IP address “192.168.219.132” which is our Windows 11 VM.
 
 4. The fifth device is as follows:  
@@ -119,17 +120,17 @@ The above two screenshots show the nmap scan report for the IP address “192.16
 | Network Layer | IP Address \- 192.168.219.131 |
 | Transport Layer |  |
 
-![][image6]  
+![Imgur](https://i.imgur.com/mYKPzmx.png)
 The above screenshot shows the nmap scan for the IP address “192.168.219.131” which is our Kali Linux VM and the same device it is running on.
 
 # INFORMATION COLLECTION METHODOLOGY {#information-collection-methodology}
 
 This screen capture shows us the local IP address and the subnet mask which gives us an idea about which IP address we need to use to run our NMAP procedure.
 
-![][image7]  
+![Imgur](https://i.imgur.com/UrDvI7k.png)
 This screenshot shows the IP address we retrieved on the KaliLinux machine \[2\].  
-Running the nmap command on the IP address and supplying the subnet mask enables it to scan all the available IP addresses and find the active ones.![][image8]  
-![][image9]  
+Running the nmap command on the IP address and supplying the subnet mask enables it to scan all the available IP addresses and find the active ones.![Imgur](https://i.imgur.com/M7YUoHW.png)
+![Imgur](https://i.imgur.com/l0fcM06.png)
 The above screenshots show the results of the command ”nmap 192.168.219.0/24”.
 
 As we can see from this, there are 6 hosts active on our Virtual Machine Network. Next, we use the nmap command on each of these IP addresses to check what devices they are and what ports are open on them. The command we use is:
@@ -141,35 +142,35 @@ nmap is the command we use to map our network. It’s called the Network Mapper.
 You can see on the images we included in the first device in our Network Devices Information section the scan we ran on the IP address “192.168.219.1” which represents our actual hardware device MacBook Pro. As you can see, it shows the ports that are open on it currently. Port numbers are generally fixed for the service they provide. The TCP  port number 80 for example is used for HTTP communication which runs most of our internet. The port 443 is reserved for HTTPS which is used for secure communication with websites that have SSL/TLS security. Port number 21 is used for FTP which is used for transferring files. On this device, you can see a couple ports which might not be on others. The port 3306 is open for mysql which could be due to a XAMPP server running on the device that has a mysql server on it configured to run on that port. There’s also a port 7000 which on further inspection is used by a service called AirTunes. It looks like an Apple service used to communicate with iTunes. Another fascinating port is 7070 which indicates it’s from a program called AnyDesk. It is a remote desktop server generally used for remote IT support but some nefarious elements have used it to run scams on unsuspecting individuals, especially older ones, who are less tech savvy. I have observed that after quitting the application and running the nmap again indicates the port as closed.
 
 On this device, nmap has been unable to determine the OS or the Device Name. I used another command called nmblookup which can get the device details to get these. If we’ve been unable to retrieve this from nmap like we did on Ubuntu and Kali, we’ve retrieved the data from the respective devices. The following information has also been verified on the corresponding devices. \[3\]  
-![][image10]  
-![][image11]
+![Imgur](https://i.imgur.com/HYhnKf6.png)
+![Imgur](https://i.imgur.com/7ZhWat9.png)
 
 We have also used WireShark to capture the packets that travel on our device that ran these mapping commands. These give us an insight into the communication processes used by our devices to connect to each other. The wireshark screenshots are as follows:
 
-![][image12]  
+![Imgur](https://i.imgur.com/XB8eUsr.png)
 The above screenshot shows the communication between our nmap tracker KaliLinux device (192.168.219.131) and the MacBook Pro hardware(192.168.219.1). It also shows all the OSI layer addresses including the open port 7070\. There are other open ports on this device all listed in the table above including the services they are used for. \[4\]
 
-![][image13]  
+![Imgur](https://i.imgur.com/tS7Dk9M.png)
 This screenshot shows the communication between our nmap tracker KaliLinux device (192.168.219.131) and this VMWare software as a device(192.168.219.2). It also shows all the OSI layer addresses and these greyed out and red packet numbers indicate all the failed communication with ports. The conversation completeness on all of these is “Incomplete”.
 
-![][image14]  
+![Imgur](https://i.imgur.com/9sTCZBN.png) 
 This screenshot shows the communication between our nmap tracker KaliLinux device (192.168.219.131) and this Ubuntu Linux VM(192.168.219.128). It also shows all the OSI layer addresses including the open port 80\.
 
-![][image15]  
+![Imgur](https://i.imgur.com/BLWtT4B.png)
 This screenshot shows the communication between our nmap tracker KaliLinux device (192.168.219.131) and this Windows VM(192.168.219.132). It also shows all the OSI layer addresses including the open port 80\. 
 
 # NETWORK TOPOLOGY {#network-topology}
 
-![][image16]  
+![Imgur](https://i.imgur.com/WIu4RKp.png)
 This screenshot is the network topology currently.
 
 I believe this is what the current network topology looks like. All of the Virtual Machines should have their own firewalls which connect to the VMWare NAT. VMWare is working on the MacBook Pro hardware which is connected by its own hardware network card to the actual router hardware. This hardware is used to connect to the Internet. All the devices in the VMWare, including the VMWare itself, has the IP Address of the format 192.168.219.0/24. So it makes sense that VMWare has made a VLAN which is running all these devices on its Virtual Network. 
 
 This creates some noise on the Linux systems. When running a wireshark capture, we can see the Windows 11 VM broadcasting a lot of communication even when nothing is actively using that connection.    
-![][image17]  
+![Imgur](https://i.imgur.com/lyvkifG.png)
 This screenshot shows the communication sent by the Windows VM over the network.  
 A better network topology would be achieved by isolating the Windows 11 VM which would reduce the noise on the KaliLinux device. That would give us a better look at what is going on in our network.  
-![][image18]  
+![Imgur](https://i.imgur.com/cUzSRm8.png)
 This screenshot shows the updated network topology which should reduce the noise on Linux systems when tracking network activities.
 
 # CITATIONS {#citations}
