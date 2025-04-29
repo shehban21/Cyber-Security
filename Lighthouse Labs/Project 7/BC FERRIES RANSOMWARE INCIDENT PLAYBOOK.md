@@ -1,6 +1,6 @@
 # 
 
-# ![][image1]
+# ![Imgur](https://imgur.com/cpFDwKa.png)
 
 # RANSOMWARE INCIDENT PLAYBOOK {#ransomware-incident-playbook}
 
@@ -157,7 +157,7 @@ Below is the structured 7-step process followed in this document as defined by t
 5. Recovery (Containment, Eradication and Recovery) — bring affected production systems back online carefully, to prevent additional attacks. Test, verify and monitor affected systems to ensure they are back to normal activity.  
 6. Lessons learned (Post-Incident Activity) — no later than two weeks from the end of the incident, perform a retrospective of the incident. Prepare complete documentation of the incident, investigate the incident further, understand what was done to contain it and whether anything in the incident response process could be improved.   
 7. Follow-up Report (Post-Incident Activity) \- A report covering the incident and the impact it had on the company should be followed up after the systems have fully recovered. It should include the number of incidents, the time spent on each incident and an objective and subjective assessment of the incident.
-
+![Imgur](https://imgur.com/lSYQQUt.png)
 			Incident Response Life Cycle
 
 # Incident Response Checklist {#incident-response-checklist}
@@ -326,10 +326,10 @@ Any organisation dealing with EU citizens' Personally Identifiable Information i
 
 # **APPENDIX C \- Playbook Activation Flowchart** {#appendix-c---playbook-activation-flowchart}
 
-![][image2]
+![Imgur](https://imgur.com/l3G81IT.png)
 
 # **APPENDIX D \- Ransomware Flowchart** {#appendix-d---ransomware-flowchart}
-
+![Imgur](https://imgur.com/w3Uogro.png)
 # 
 
 # **APPENDIX E \- Citations** {#appendix-e---citations}
