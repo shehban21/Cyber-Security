@@ -107,7 +107,7 @@ This report will provide steps to recognise and stop an attack like this one wit
 
 # WORKFLOW FLOWCHART\[2\] {#workflow-flowchart[2]}
 
-![][image1]
+![Imgur](https://imgur.com/eoIbWnF.png)
 
 This flowchart shows the steps described in the previous section, Playbook Steps. 
 
