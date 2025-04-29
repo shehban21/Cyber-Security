@@ -129,8 +129,10 @@ This screen capture shows us the local IP address and the subnet mask which give
 
 ![Imgur](https://i.imgur.com/UrDvI7k.png)
 This screenshot shows the IP address we retrieved on the KaliLinux machine \[2\].  
-Running the nmap command on the IP address and supplying the subnet mask enables it to scan all the available IP addresses and find the active ones.![Imgur](https://i.imgur.com/M7YUoHW.png)
+Running the nmap command on the IP address and supplying the subnet mask enables it to scan all the available IP addresses and find the active ones.
+![Imgur](https://i.imgur.com/M7YUoHW.png)
 ![Imgur](https://i.imgur.com/l0fcM06.png)
+
 The above screenshots show the results of the command ”nmap 192.168.219.0/24”.
 
 As we can see from this, there are 6 hosts active on our Virtual Machine Network. Next, we use the nmap command on each of these IP addresses to check what devices they are and what ports are open on them. The command we use is:
