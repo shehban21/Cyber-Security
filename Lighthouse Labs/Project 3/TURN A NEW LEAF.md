@@ -55,7 +55,7 @@ We have also provided a way to automate this process. After automating it, the s
   Here are the steps to set up that passwordless but secure connection:  
 1. We run the command “ssh-keygen” on the source server, i.e. , the Windows Server. This generates a public/private rsa key pair. The path to the generated file is “.ssh/id\_rsa” in the folder where the command was executed.\[2\]
 
-   ![][image2]
+   ![Imgur](https://imgur.com/QpOSonZ.png)
 
    ssh-keygen Result
 
@@ -113,18 +113,18 @@ We have also provided a way to automate this process. After automating it, the s
 * Windows Task Scheduler \- Once this batch file is set up to do this task, we need to schedule it to do it on a regular basis. For this, we’ll make use of the Windows Task Scheduler.  
 * There are some steps required to do the same\[3\]  
 * First, open Windows Task Scheduler and click on Action \> Create Basic Task  
-  ![][image3]  
+  ![Imgur](https://imgur.com/e449f3r.png)
   Step 1 in Windows Task Scheduler  
-  Next, we schedule it to run weekly at midnight every Friday morning.![][image4]  
+  Next, we schedule it to run weekly at midnight every Friday morning.![Imgur](https://imgur.com/6g7Y4mc.png)  
   Step 2 in Windows Task Scheduler  
-* The action we select is “Start a program” which can be used to run our batch file.![][image5]Step 3 in Windows Task Scheduler  
-* Finally, we select the program we want to run from the Browse button under “Program/script” and point it to our batch file. We also need to add the Start in value as the folder our Batch file exists in to make sure the terminal opens in that folder![][image6]  
+* The action we select is “Start a program” which can be used to run our batch file.![Imgur](https://imgur.com/qPazEHD.png)Step 3 in Windows Task Scheduler  
+* Finally, we select the program we want to run from the Browse button under “Program/script” and point it to our batch file. We also need to add the Start in value as the folder our Batch file exists in to make sure the terminal opens in that folder![Imgur](https://imgur.com/jf1U8nj.png) 
   Last step in the Windows Task Scheduler  
 * Now, we’re done with the Windows Server and move to the Linux one to do the analysis.\[3\]
 
 * Bash \- Bash is the equivalent of Batch on Linux systems. It is used to run terminal commands in a batch by running them from one file.  
 * This bash file does most of our heavy lifting in analysis. The first line describes the shell that will be used to run this script and is known as shebang\[4\]. Firstly, this script copies the log file from the local apache folder to the “logs” folder which also receives the file from the Windows Server.  
-  ![][image7]  
+  ![Imgur](https://imgur.com/DtCuRcO.png)
   Bash script that aggregates both server logs and runs the python script later  
     
 * Then, it navigates to the log folder and uses the “grep”\[5\] command to filter the logs and only show lines which contain errors that are “4xx” HTTP errors. These errors are generally caused by client error but a high number of these errors from the same IP address can indicate a malicious party trying to infiltrate but failing due to missing credentials\[1\].  
@@ -133,7 +133,7 @@ We have also provided a way to automate this process. After automating it, the s
 
 * Python \- Python is a high level programming language that is quite popular in Cyber Security to monitor and analyse log files.  
 * The first few lines in our Python script are used to import prewritten components that make it easier for us to add features to our analysing Python script.  
-  ![][image8]  
+  ![Imgur](https://imgur.com/VD4lw2n.png)
   Python script  
 * The variable “pattern” defines the Regular Expression(regex) we’ll be using to filter IP addresses from our log.\[6\]   
 * The regular expression we’ve used is very simple and could also accept “999.999.999.999” which is not a valid IP address. But, for the purpose of our script, the data it is filtering comes from Apache logs which would only have valid IP addresses in the first place.\[6\]   
@@ -142,19 +142,19 @@ We have also provided a way to automate this process. After automating it, the s
 * Now that the results have been analysed, it’s time to output them. First, the IP addresses, the amount of times they have appeared and the day the script has added them to this file are written to a csv file that can be analysed at any time by the security section of the organisation.\[9\]  
 * Lastly, in case IP addresses that have high occurrences of errors have been found by the script, it will send a message to the Slack channel specified by the organisation to alert the group responsible for security.\[10\]
 
-![][image9]  
+![Imgur](https://imgur.com/EYkjyAH.png)
 Results in the csv file outputted by the Python script.  
-![][image10]  
+![Imgur](https://imgur.com/0dtZVVm.png)
 Slack message sent by the python script bot on finding suspicious activity.
 
 * Cron \- The last tool we use in this automated system is Cron, which is used to schedule tasks on a machine. It is similar to Windows Task Scheduler, but much more powerful.  
 * The bash script we have programmed earlier is scheduled to run every Friday at midnight by this cron setup.  
-  ![][image11]
+  ![Imgur](https://imgur.com/P6u1odF.png)
 
 	crontab scheduling
 
 * First, we need to make sure the commands and scripts we’re running have permission to actually execute. If they don’t, we can change them by using the command “chmod”.\[11\]  
-  ![][image12]  
+  ![Imgur](https://imgur.com/bAAfwfW.png)
   Giving appropriate permissions to files  
 * Cron comes preinstalled on Linux in most cases. If it is missing, it can be installed by the following command:  
   * sudo apt install cron\[11\]  
@@ -167,7 +167,7 @@ Slack message sent by the python script bot on finding suspicious activity.
 
 # OUTPUT ANALYSIS {#output-analysis}
 
-![][image9]  
+![Imgur](https://imgur.com/EYkjyAH.png)
     Results in the csv file outputted by the Python script.
 
 * The output from the automated process we’ve set up for the organisation is all in the csv file “ips.csv” in the “Logs” folder on the Linux Server.  
