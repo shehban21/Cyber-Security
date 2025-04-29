@@ -45,7 +45,7 @@ We have also provided a way to automate this process. After automating it, the s
 # PROGRAMMING TOOLS {#programming-tools}
 
 * Batch \- Batch is used in Windows to run commands that we normally use in the terminal.  
-  ![][image1]  
+  ![Imgur](https://imgur.com/9WrVBIM)
   Batch file to copy log from Windows to Linux Server  
     
   The batch file we have programmed on our Windows Server only does one thing. It sends the log file to the Linux Server where we do most of our processing of the data.  
