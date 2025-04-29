@@ -128,8 +128,10 @@ The above screenshot shows the nmap scan for the IP address â€œ192.168.219.131â€
 This screen capture shows us the local IP address and the subnet mask which gives us an idea about which IP address we need to use to run our NMAP procedure.
 
 ![Imgur](https://i.imgur.com/UrDvI7k.png)
+
 This screenshot shows the IP address we retrieved on the KaliLinux machine \[2\].  
 Running the nmap command on the IP address and supplying the subnet mask enables it to scan all the available IP addresses and find the active ones.
+
 ![Imgur](https://i.imgur.com/M7YUoHW.png)
 ![Imgur](https://i.imgur.com/l0fcM06.png)
 
